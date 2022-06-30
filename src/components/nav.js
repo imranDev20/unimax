@@ -5,9 +5,11 @@ const Nav = () => {
   const routes = [
     { id: 1, label: "Home", link: "/" },
     { id: 2, label: "About", link: "/about" },
-    { id: 3, label: "Services", link: "/services" },
-    { id: 4, label: "Contact", link: "/contact" },
-    { id: 5, label: "Blog", link: "/blog" },
+    { id: 3, label: "Team", link: "/team" },
+    { id: 4, label: "Services", link: "/services" },
+    { id: 5, label: "Pricing", link: "/pricing" },
+    { id: 6, label: "Contact", link: "/contact" },
+    { id: 7, label: "Blog", link: "/blog" },
   ];
   return (
     <nav className="">

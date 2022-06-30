@@ -15,7 +15,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 const Footer = () => {
   const today = new Date();
   return (
-    <footer className="container mx-auto px-10 mt-36">
+    <footer className="container mx-auto px-10 mt-48">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 ">
         <div>
           <Logo />
@@ -28,6 +28,7 @@ const Footer = () => {
               target="_blank"
               href="https://facebook.com"
               className="w-10 h-10 border rounded flex justify-center items-center mr-4 hover:bg-secondary hover:text-white transition"
+              rel="noreferrer"
             >
               <FaFacebookF className="text-xl" />
             </a>
@@ -35,6 +36,7 @@ const Footer = () => {
               target="_blank"
               href="https://facebook.com"
               className="w-10 h-10 border rounded flex justify-center items-center mr-4 hover:bg-secondary hover:text-white transition"
+              rel="noreferrer"
             >
               <FaTwitter className="text-xl" />
             </a>
@@ -42,6 +44,7 @@ const Footer = () => {
               target="_blank"
               href="https://facebook.com"
               className="w-10 h-10 border rounded flex justify-center items-center mr-4 hover:bg-secondary hover:text-white transition"
+              rel="noreferrer"
             >
               <FaLinkedinIn className="text-xl" />
             </a>
@@ -167,12 +170,23 @@ const Footer = () => {
         </div>
       </div>
       <hr className="mt-16" />
-      <p className="text-center text-primary my-7">
+
+      <p className="text-center text-primary mt-7 mb-2">
         © {today.getFullYear()}{" "}
         <Link to="/" className="text-secondary">
           Unimax Global
         </Link>
         . All Rights Reserved
+      </p>
+      <p className="text-sm text-center mb-7 text-primary">
+        Designed & Developed by{" "}
+        <a
+          className="text-secondary"
+          target="_blank"
+          href="https://imrankabir.netlify.app"
+        >
+          Imran Kabir
+        </a>
       </p>
     </footer>
   );

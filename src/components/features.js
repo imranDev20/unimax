@@ -1,6 +1,7 @@
 import React from "react";
-import SectionTitle from "./section-title";
+import SectionTitle from "./SectionTitle";
 import ExperienceIcon from "../images/icons/experience.svg";
+import SolutionIcon from "../images/icons/solution.svg";
 
 const Features = () => {
   const features = [
@@ -17,7 +18,8 @@ const Features = () => {
     },
     {
       id: 3,
-      title: "Big Experience",
+      icon: SolutionIcon,
+      title: "Personal Solution",
       text: "Many years of work in this field is an excellent indicator that companies trust us and in response we offer unique solutions.",
     },
     {
@@ -37,22 +39,22 @@ const Features = () => {
     },
   ];
   return (
-    <section className="container mx-auto px-10 my-20">
+    <section className="container mx-auto px-10 my-36">
       <SectionTitle className="text-5xl text-center">
         Exciting Features of Unimax
       </SectionTitle>
-      <div className="grid grid-cols-2 gap-16 mt-16">
+      <div className="grid grid-cols-2 mt-16">
         {features.map((feature) => (
           <div
             key={feature.id}
-            className="rounded-lg transition duration-200 flex"
+            className="rounded-lg transition duration-200 flex items-center  p-7"
           >
-            <div className="w-48 mr-5 mb-5">
-              <img className="object-cover" src={ExperienceIcon} alt="" />
+            <div className="w-48 mr-7 mb-5">
+              <img className="object-cover" src={feature.icon} alt="" />
             </div>
             <div>
               <h3 className="text-3xl font-medium mb-5">{feature.title}</h3>
-              <p className="text-primary leading-7 text-lg">{feature.text}</p>
+              <p className="text-primary leading-7 text-2md">{feature.text}</p>
             </div>
           </div>
         ))}

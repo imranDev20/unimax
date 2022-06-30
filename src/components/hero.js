@@ -1,21 +1,26 @@
 import React from "react";
 import { LinkButton } from "./button";
-import SectionText from "./section-text";
-import SectionTitle from "./section-title";
+import SectionText from "./SectionText";
+import SectionTitle from "./SectionTitle";
+import HeroBg from "../images/hero-bg.svg";
 
 const Hero = () => {
   return (
-    <section className="container mx-auto px-10 flex my-36">
+    <section className="container mx-auto px-10 flex items-center my-28">
       <div className="w-full lg:w-1/2">
         <SectionTitle className="text-7xl">
           Welcome to Unimax Global
         </SectionTitle>
         <SectionText>
-          Reimagine your brand. We provide full-service creativity to
-          organizations.
+          Unimax Global follows by its principle of building an all-in-one IT
+          solution place where no clients have to turn back! We have everything
+          you need to construct an eye-catching online platform that follows the
+          trend and falls fight into place.
         </SectionText>
-
         <LinkButton to="/contact">Contact</LinkButton>
+      </div>
+      <div className="w-full lg:w-1/2">
+        <img className="w-full h-full object-cover" src={HeroBg} alt="" />
       </div>
     </section>
   );

@@ -14,3 +14,16 @@ h5,
 h6 {
   @apply text-primary;
 }
+
+.swiper-wrapper {
+  @apply mb-14;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply text-primary !text-3xl;
+}
+
+.swiper-pagination-bullet {
+  @apply !bg-primary;
+}

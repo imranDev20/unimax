@@ -1,12 +1,28 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+const strapiConfig = {
+  apiURL: process.env.STRAPI_API_URL,
+  accessToken: process.env.STRAPI_TOKEN,
+  collectionTypes: ["article", "company", "author"],
+  singleTypes: [],
+};
+
 module.exports = {
   trailingSlash: "never",
   siteMetadata: {
     title: `Unimax Global`,
     siteUrl: `https://www.yourdomain.tld`,
+    author: `@imrankabir97`,
   },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
+    {
+      resolve: `gatsby-source-strapi`,
+      options: strapiConfig,
+    },
     {
       resolve: "gatsby-plugin-manifest",
       options: {
