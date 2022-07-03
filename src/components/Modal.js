@@ -16,7 +16,7 @@ const Modal = ({ handleClose, children, title }) => {
   return (
     <Backdrop>
       <motion.div
-        className="max-w-[90%] lg:max-w-[50%] m-auto flex flex-col items-center z-20 bg-white rounded px-7 pt-10 pb-5 relative"
+        className="max-w-[90%] lg:max-w-[50%] m-auto flex flex-col items-center z-20 bg-background rounded px-7 pt-10 pb-5 relative"
         variants={dropIn}
         initial="hidden"
         animate="visible"
@@ -27,7 +27,7 @@ const Modal = ({ handleClose, children, title }) => {
 
         <FaTimes
           onClick={handleClose}
-          className="absolute top-7 right-7 text-xl cursor-pointer"
+          className="absolute top-7 right-7 text-xl cursor-pointer hover:text-secondary transition-colors"
         />
 
         {children}

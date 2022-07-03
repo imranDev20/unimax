@@ -1,6 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import { NormalButton } from "./Button";
+import Form from "./Form";
 import Logo from "./Logo";
 import Modal from "./Modal";
 import Nav from "./Nav";
@@ -40,9 +41,9 @@ const Header = () => {
           <Modal
             modalOpen={modalOpen}
             handleClose={close}
-            title="Request an appointment!!!"
+            title="Request service"
           >
-            Hello Folks
+            <Form />
           </Modal>
         )}
       </AnimatePresence>

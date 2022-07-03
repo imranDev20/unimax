@@ -3,15 +3,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 const Nav = () => {
-  // const routes = [
-  //   { id: 1, label: "Home", link: "/" },
-  //   { id: 2, label: "About", link: "/about" },
-  //   { id: 3, label: "Team", link: "/team" },
-  //   { id: 4, label: "Services", link: "/services" },
-  //   { id: 5, label: "Pricing", link: "/pricing" },
-  //   { id: 6, label: "Contact", link: "/contact" },
-  //   { id: 7, label: "Blog", link: "/blog" },
-  // ];
   const [isHoverAbout, toggleHoverAbout] = useState(false);
   const toggleHoverMenuAbout = () => {
     toggleHoverAbout(!isHoverAbout);
