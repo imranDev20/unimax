@@ -21,9 +21,9 @@ h6 {
 
 .swiper-button-next:after,
 .swiper-button-prev:after {
-  @apply text-primary !text-3xl;
+  @apply text-secondary !text-3xl;
 }
 
 .swiper-pagination-bullet {
-  @apply !bg-primary;
+  @apply !bg-secondary;
 }

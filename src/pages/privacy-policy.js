@@ -1,7 +1,8 @@
 import React from "react";
+import Layout from "../components/Layout";
 
 const PrivacyPolicyPage = () => {
-  return <div>PrivacyPolicyPage</div>;
+  return <Layout>PrivacyPolicyPage</Layout>;
 };
 
 export default PrivacyPolicyPage;
