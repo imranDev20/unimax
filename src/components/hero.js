@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkButton } from "./button";
+import { LinkButton } from "./Button";
 import SectionText from "./SectionText";
 import SectionTitle from "./SectionTitle";
 import HeroBg from "../images/hero-bg.svg";

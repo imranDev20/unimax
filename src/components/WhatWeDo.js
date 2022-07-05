@@ -12,26 +12,44 @@ const WhatWeDo = () => {
           />
         </div>
       </div>
-      <div className="w-1/2 lg:ml-20">
-        <h2 className="text-4xl font-semibold max-w-lg mb-10 leading-[50px] capitalize">
-          Unimax unleashes your business potential by the constant innovation.
+      <div className="w-1/2 lg:ml-20 text-primary">
+        <h2 className="text-5xl font-semibold max-w-lg mb-10 leading-[50px] capitalize">
+          About Unimax Global
         </h2>
-        <div className="mb-7">
-          <h3 className="text-2xl font-medium mb-3">Company Benefits</h3>
-          <p>
-            Based in Paris, we work closely with clients from around the world,
-            getting to the heart of their business to develop successful digital
-            ideas and more.
-          </p>
-        </div>
-        <div>
-          <h3 className="text-2xl font-medium mb-3">Company Benefits</h3>
-          <p className="">
-            Based in Paris, we work closely with clients from around the world,
-            getting to the heart of their business to develop successful digital
-            ideas and more.
-          </p>
-        </div>
+
+        <p>
+          Our web design company specializes in the professional creation of
+          unique sites.
+        </p>
+        <blockquote className="my-5">
+          <span className="font-['playfair_display'] italic text-3xl my-3 font-medium">
+            “Alone we can do so little, together we can do so much”
+          </span>{" "}
+          – <span className="text-secondary">Hellen Keller</span>
+        </blockquote>
+        <p>
+          Unimax Global was established five years prior with the principal
+          objective of making a working environment giving all-in-one solutions
+          for IT-related issues and spreading our administrations from one side
+          of the planet to the other.
+        </p>
+        <p className="mt-3">
+          Our team constantly monitors the emergence of new technologies that we
+          are not afraid to implement in web projects. We create only selling
+          websites – this is an achievement by drawing the design and working
+          out usability. The approach to each new project is individual, we
+          treat every customer equally, regardless of the size of the company
+          and its budget.
+        </p>
+        <p className="mt-3">
+          We pride ourselves, on the quality of our work, our dedication to
+          truly understanding our client’s goals, and our execution helping them
+          realize them.
+        </p>
+        <p className="mt-3">
+          Schedule a meeting at the link below to get a quote and timeline on
+          your project today.
+        </p>
       </div>
     </section>
   );

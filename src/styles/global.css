@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply font-['Space_Grotesk'] bg-gradient-to-b from-background to-white bg-no-repeat min-h-[100vh];
+  @apply font-['Space_Grotesk'] bg-gradient-to-b from-background to-white bg-no-repeat min-h-[100vh] relative;
 }
 
 h1,

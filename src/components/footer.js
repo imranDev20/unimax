@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import React from "react";
-import Logo from "./logo";
+import Logo from "./Logo";
 import {
   FaFacebookF,
   FaTwitter,
@@ -170,22 +170,15 @@ const Footer = () => {
       </div>
       <hr className="mt-16" />
 
-      <p className="text-center text-primary mt-7 mb-2">
+      <p className="text-center text-primary mt-10 mb-2">
         © {today.getFullYear()}{" "}
         <Link to="/" className="text-secondary">
           Unimax Global
         </Link>
         . All Rights Reserved
       </p>
-      <p className="text-sm text-center mb-7 text-primary">
-        Designed & Developed by{" "}
-        <a
-          className="text-secondary"
-          target="_blank"
-          href="https://imrankabir.netlify.app"
-        >
-          Imran Kabir
-        </a>
+      <p className="text-xs text-center mt-4 mb-10 text-primary">
+        Designed & Developed by the Unimax Team
       </p>
     </footer>
   );

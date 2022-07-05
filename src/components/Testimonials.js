@@ -62,7 +62,10 @@ const Testimonials = () => {
           onSlideChange={() => console.log("slide change")}
         >
           {testimonials.map((testimonial) => (
-            <SwiperSlide className="flex flex-col items-center bg-white p-10 rounded-lg">
+            <SwiperSlide
+              key={testimonial.id}
+              className="flex flex-col items-center bg-white shadow-custom p-10 rounded-lg"
+            >
               <div className="rounded-full overflow-hidden w-20 h-20 flex justify-center items-center">
                 <img
                   className="w-full h-full object-cover"

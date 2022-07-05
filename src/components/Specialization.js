@@ -33,7 +33,7 @@ const Specialization = () => {
         {skills.map((skill) => (
           <div
             key={skill.id}
-            className="rounded-lg p-10 bg-white flex flex-col justify-center"
+            className="rounded-lg p-10 bg-white flex flex-col justify-center shadow-custom"
           >
             <div className="h-44 flex justify-center items-center">
               <img
@@ -42,11 +42,9 @@ const Specialization = () => {
                 alt={skill.name}
               />
             </div>
-            <div className="">
-              <h3 className="text-center text-3xl font-medium mt-10">
-                {skill.name}
-              </h3>
-            </div>
+            <h3 className="text-center text-3xl font-medium mt-10">
+              {skill.name}
+            </h3>
           </div>
         ))}
       </div>

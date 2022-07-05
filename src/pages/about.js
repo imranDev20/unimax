@@ -6,6 +6,7 @@ import SectionText from "../components/SectionText";
 import Counter from "../components/Counter";
 import Seo from "../components/Seo";
 import WhatWeDo from "../components/WhatWeDo";
+import Accordion from "../components/Accordion";
 
 const AboutPage = () => {
   return (
@@ -23,14 +24,22 @@ const AboutPage = () => {
         </p>
         <SectionTitle className="text-5xl text-center">About Us</SectionTitle>
         <SectionText className="max-w-5xl mx-auto text-center">
-          When it comes to online reviews, a high star rating isn’t enough to
-          set your business apart from the competition. They want to know what
-          exactly they liked so that they can gauge whether it aligns with their
-          own preferences.
+          We Ensure Quality & Best Service Website Design, Development & Graphic
+          Design
         </SectionText>
       </section>
       <WhatWeDo />
       <Counter />
+      <section className="container px-10 mx-auto mt-36 flex justify-between">
+        <div className="w-1/2">
+          <h2 className="">Digital solutions for your online business.</h2>
+        </div>
+        <div className="w-1/2">
+          {[0, 1, 2, 3].map((n) => (
+            <Accordion key={n} />
+          ))}
+        </div>
+      </section>
     </Layout>
   );
 };

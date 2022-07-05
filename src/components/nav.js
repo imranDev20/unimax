@@ -1,6 +1,7 @@
 import { Link } from "gatsby";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FiChevronDown } from "react-icons/fi";
 
 const Nav = () => {
   const [isHoverAbout, toggleHoverAbout] = useState(false);
@@ -51,18 +52,19 @@ const Nav = () => {
           onHoverEnd={toggleHoverMenuAbout}
         >
           <Link
-            className="py-5 px-5 inline-block text-primary hover:text-secondary font-medium transition text"
+            className="py-5 px-5 text-primary hover:text-secondary font-medium transition text flex items-center"
             to="/about"
             activeClassName="text-secondary"
           >
             About
+            <FiChevronDown className="ml-1" />
           </Link>
           <motion.div
             initial="exit"
             animate={isHoverAbout ? "enter" : "exit"}
             variants={subMenuAnimate}
           >
-            <div className="shadow-lg bg-white rounded-md p-5 min-w-[180px]">
+            <div className="shadow-custom bg-white rounded-md p-5 min-w-[180px]">
               <Link
                 className="block pb-3 text-primary hover:text-secondary font-medium transition text"
                 to="/team"
@@ -99,18 +101,19 @@ const Nav = () => {
           onHoverEnd={toggleHoverMenuServices}
         >
           <Link
-            className="py-5 px-5 inline-block text-primary hover:text-secondary font-medium transition text"
+            className="py-5 px-5 text-primary hover:text-secondary font-medium transition text flex items-center"
             to="/services"
             activeClassName="text-secondary"
           >
             Services
+            <FiChevronDown className="ml-1" />
           </Link>
           <motion.div
             initial="exit"
             animate={isHoverServices ? "enter" : "exit"}
             variants={subMenuAnimate}
           >
-            <div className="shadow-lg bg-white rounded-md p-5 min-w-[180px]">
+            <div className="shadow-custom bg-white rounded-md p-5 min-w-[180px]">
               <Link
                 className="block pb-3 text-primary hover:text-secondary font-medium transition text"
                 to="/team"

@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
 import ExperienceIcon from "../images/icons/experience.svg";
+import TeamIcon from "../images/icons/team.svg";
 import SolutionIcon from "../images/icons/solution.svg";
 
 const Features = () => {
@@ -13,6 +14,7 @@ const Features = () => {
     },
     {
       id: 2,
+      icon: TeamIcon,
       title: "Strong Team",
       text: "An excellent team of professionals will help you to bring all your ideas to life in the best possible way and with flexible functionality.",
     },

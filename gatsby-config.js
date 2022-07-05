@@ -43,7 +43,10 @@ module.exports = {
     {
       resolve: "@slixites/gatsby-plugin-google-fonts",
       options: {
-        fonts: ["space grotesk:100,200,300,400,500,600,700,800,900"],
+        fonts: [
+          "space grotesk:100,200,300,400,500,600,700,800,900",
+          "playfair display:400,400i,500,500i,600,600i,700,700i",
+        ],
         display: "swap",
         preconnect: true,
         attributes: {

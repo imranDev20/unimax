@@ -13,11 +13,9 @@ export const LinkButton = ({ to, children }) => {
 };
 
 export const NormalButton = ({
-  to,
   children,
   className,
   modalOpen,
-  setModalOpen,
   open,
   close,
 }) => {

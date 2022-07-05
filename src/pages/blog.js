@@ -2,7 +2,13 @@ import React from "react";
 import Layout from "../components/Layout";
 
 const Blog = () => {
-  return <Layout>Blog</Layout>;
+  return (
+    <Layout>
+      <section className="container mx-auto px-10 flex justify-center items-center py-20 text-4xl text-primary">
+        Coming Soon!!!
+      </section>
+    </Layout>
+  );
 };
 
 export default Blog;

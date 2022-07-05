@@ -3,21 +3,51 @@ import CounterBlock from "./CounterBlock";
 
 const Counter = () => {
   return (
-    <section className="container mx-auto px-10 mt-96 flex justify-between">
+    <section className="container mx-auto px-10 mt-48 flex justify-between">
       <div className="w-1/2">
-        <h2 className="text-5xl font-bold max-w-md">
-          We generated 2x more online sales in 2021.
-        </h2>
-        <p className="max-w-sm mt-6">
-          The biggest brands in the automotive industry recommend our company as
-          a reliable corporate website developer
+        <h2 className="text-5xl font-bold max-w-md">Why Choose Us</h2>
+        <p className="max-w-sm mt-10 font-['playfair_display'] italic text-3xl my-3 font-medium text-primary">
+          Reach out to the world’s most reliable IT services.
+        </p>
+
+        <p className="max-w-sm mt-5 text-primary">
+          The IT services that Unimax Global are running can be segmented by the
+          type of skills employed to deliver the service (design, build, run).
+        </p>
+        <p className="max-w-sm mt-5 text-primary">
+          Technically, these fall into three main categories: business process
+          services, application services, and infrastructure services.
         </p>
       </div>
-      <div className="w-1/2 grid grid-cols-2 rounded-lg overflow-hidden">
-        <CounterBlock target={99} title="Recommended" duration={2} symbol="+" />
-        <CounterBlock target={99} title="Recommended" duration={2} symbol="+" />
-        <CounterBlock target={99} title="Recommended" duration={2} symbol="+" />
-        <CounterBlock target={99} title="Recommended" duration={2} symbol="+" />
+      <div className="w-1/2 max-w-md mx-auto grid grid-cols-2 rounded-lg overflow-hidden shadow-custom bg-white">
+        <CounterBlock
+          first
+          target={15}
+          title="Skilled Team Members"
+          duration={2}
+          symbol="+"
+        />
+        <CounterBlock
+          second
+          target={115}
+          title="Satisfied Customers"
+          duration={2}
+          symbol="+"
+        />
+        <CounterBlock
+          third
+          target={65}
+          title="Successfull Projects"
+          duration={2}
+          symbol="+"
+        />
+        <CounterBlock
+          fourth
+          target={5}
+          title="Years of Experience"
+          duration={2}
+          symbol="+"
+        />
       </div>
     </section>
   );

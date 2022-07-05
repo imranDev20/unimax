@@ -5,6 +5,9 @@ module.exports = {
       fontSize: {
         "2md": "1.063",
       },
+      boxShadow: {
+        custom: "0px 10px 35px 0px rgba(115, 133, 155, 0.1)",
+      },
       colors: {
         primary: "#002159",
         secondary: "#4787FA",
