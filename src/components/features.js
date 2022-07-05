@@ -40,6 +40,7 @@ const Features = () => {
       text: "Many years of work in this field is an excellent indicator that companies trust us and in response we offer unique solutions.",
     },
   ];
+
   return (
     <section className="container mx-auto px-10 my-36">
       <SectionTitle className="text-5xl text-center">

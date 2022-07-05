@@ -1,10 +1,28 @@
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import React from "react";
 import Layout from "../components/Layout";
 import SectionText from "../components/SectionText";
 import SectionTitle from "../components/SectionTitle";
 
 const TeamPage = () => {
+  const data = useStaticQuery(graphql`
+    query TeamQuery {
+      allStrapiTeam {
+        nodes {
+          slug
+          name
+          designation
+          avatar {
+            localFile {
+              childImageSharp {
+                gatsbyImageData
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
   return (
     <Layout>
       <section className="container px-10 mx-auto">
@@ -25,20 +43,7 @@ const TeamPage = () => {
         </SectionText>
       </section>
 
-      <section className="container px-10 mx-auto grid grid-cols-3">
-        <div className="">
-          <div>
-            <img
-              src="https://unimaxglobal.net/wp-content/uploads/elementor/thumbs/Zakir-Hossain-1-pof6rg8hqg9maijyquaguknkal3g9jqwoqzq19ay6g.jpg"
-              alt=""
-            />
-          </div>
-
-          <h4>Zakir Hossain</h4>
-          <p>Founder & CEO</p>
-          <p>'Quality Is Our Commitment'</p>
-        </div>
-      </section>
+      <section className="container px-10 mx-auto grid grid-cols-3"></section>
     </Layout>
   );
 };

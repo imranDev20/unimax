@@ -5,7 +5,26 @@ require("dotenv").config({
 const strapiConfig = {
   apiURL: process.env.STRAPI_API_URL,
   accessToken: process.env.STRAPI_TOKEN,
-  collectionTypes: ["article", "company", "author"],
+  collectionTypes: [
+    {
+      singularName: `team`,
+      queryParams: {
+        populate: {
+          image: "*",
+          images: "*",
+          avatar: {
+            populate: "*",
+          },
+          skills: {
+            populate: "*",
+          },
+          capabilities: {
+            populate: "*",
+          },
+        },
+      },
+    },
+  ],
   singleTypes: [],
 };
 
