@@ -2,6 +2,7 @@ import * as React from "react";
 import Features from "../components/features";
 import Hero from "../components/hero";
 import Layout from "../components/Layout";
+import Portfolio from "../components/Portfolio";
 import Process from "../components/Process";
 import Seo from "../components/Seo";
 import Specialization from "../components/specialization";
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <Hero />
       <Specialization />
       <Features />
+      <Portfolio />
       <Technologies />
       <Process />
       <Testimonials />

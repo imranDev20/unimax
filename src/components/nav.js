@@ -73,25 +73,11 @@ const Nav = () => {
                 Team
               </Link>
               <Link
-                className="block pb-3 text-primary hover:text-secondary font-medium transition text"
-                to="/team"
+                className="block text-primary hover:text-secondary font-medium transition text"
+                to="/careers"
                 activeClassName="text-secondary"
               >
-                Message From CEO
-              </Link>
-              <Link
-                className="block pb-3 text-primary hover:text-secondary font-medium transition text"
-                to="/team"
-                activeClassName="text-secondary"
-              >
-                Company Profile
-              </Link>
-              <Link
-                className="block  text-primary hover:text-secondary font-medium transition text"
-                to="/team"
-                activeClassName="text-secondary"
-              >
-                Payment Process
+                Careers
               </Link>
             </div>
           </motion.div>

@@ -7,6 +7,7 @@ import Seo from "../components/Seo";
 import sanitizeHtml from "sanitize-html";
 import Layout from "../components/Layout";
 import SectionTitle from "../components/SectionTitle";
+import Breadcrumb from "../components/Breadcrumb";
 
 const MemberDetails = ({ data }) => {
   console.log(data?.strapiTeam);
@@ -16,22 +17,7 @@ const MemberDetails = ({ data }) => {
     <Layout>
       <Seo title={teamData?.name} />
       <section>
-        <p className="text-center mt-16 text-sm mb-10 uppercase">
-          <Link
-            className="hover:text-primary text-neutral-500 transition-colors"
-            to="/"
-          >
-            Home
-          </Link>
-          /{" "}
-          <Link
-            className="hover:text-primary text-neutral-500 transition-colors"
-            to="/team"
-          >
-            Team
-          </Link>{" "}
-          / <span className="text-primary font-medium">{teamData?.name}</span>
-        </p>
+        <Breadcrumb second="team" third={teamData?.name} />
         <SectionTitle className="text-5xl text-center">
           {teamData?.name}
         </SectionTitle>
