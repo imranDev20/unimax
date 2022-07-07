@@ -24,6 +24,25 @@ const strapiConfig = {
         },
       },
     },
+    {
+      singularName: `page`,
+      queryParams: {
+        populate: {
+          image: "*",
+          images: "*",
+          blocks: {
+            populate: {
+              heroImage: {
+                populate: "*",
+              },
+              featureIconStack: {
+                populate: "*",
+              },
+            },
+          },
+        },
+      },
+    },
   ],
   singleTypes: [],
 };

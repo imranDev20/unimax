@@ -58,11 +58,11 @@ const MemberDetails = ({ data }) => {
                   {teamData?.phone}
                 </a>
               </div>
-              <div className="flex justify-between pb-3">
+              <div className="flex justify-between pb-3 items-center">
                 <p className="text-gray-500 font-semibold text-lg">Email</p>
                 <a
                   href={`mailto:${teamData?.email}`}
-                  className="text-lg text-gray-500 hover:text-secondary transition duration-300 cursor-pointer"
+                  className="text-sm text-gray-500 hover:text-secondary transition duration-300 cursor-pointer"
                 >
                   {teamData?.email}
                 </a>

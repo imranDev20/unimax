@@ -1,12 +1,12 @@
 import * as React from "react";
-import Features from "../components/features";
-import Hero from "../components/hero";
+import Features from "../components/Features";
+import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Portfolio from "../components/Portfolio";
 import Process from "../components/Process";
 import Seo from "../components/Seo";
-import Specialization from "../components/specialization";
-import Technologies from "../components/technologies";
+import Specialization from "../components/Specialization";
+import Technologies from "../components/Technologies";
 import Testimonials from "../components/Testimonials";
 
 // markup

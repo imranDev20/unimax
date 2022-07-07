@@ -8,7 +8,12 @@ const TeamCard = ({ image, name, designation, slug }) => {
       to={`/team/${slug}`}
       className="shadow-custom rounded-lg overflow-hidden"
     >
-      <GatsbyImage image={image} />
+      <GatsbyImage
+        className="h-64"
+        imgClassName="w-full h-full"
+        objectFit="cover"
+        image={image}
+      />
 
       <div className="text-center py-7 bg-white">
         <h3 className="text-2xl font-semibold text-primary pb-1">{name}</h3>

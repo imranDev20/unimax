@@ -3,43 +3,37 @@ import SectionTitle from "./SectionTitle";
 import ExperienceIcon from "../images/icons/experience.svg";
 import TeamIcon from "../images/icons/team.svg";
 import SolutionIcon from "../images/icons/solution.svg";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Features = () => {
-  const features = [
-    {
-      id: 1,
-      icon: ExperienceIcon,
-      title: "Big Experience",
-      text: "Many years of work in this field is an excellent indicator that companies trust us and in response we offer unique solutions.",
-    },
-    {
-      id: 2,
-      icon: TeamIcon,
-      title: "Strong Team",
-      text: "An excellent team of professionals will help you to bring all your ideas to life in the best possible way and with flexible functionality.",
-    },
-    {
-      id: 3,
-      icon: SolutionIcon,
-      title: "Personal Solution",
-      text: "Many years of work in this field is an excellent indicator that companies trust us and in response we offer unique solutions.",
-    },
-    {
-      id: 4,
-      title: "Big Experience",
-      text: "Many years of work in this field is an excellent indicator that companies trust us and in response we offer unique solutions.",
-    },
-    {
-      id: 5,
-      title: "Big Experience",
-      text: "Many years of work in this field is an excellent indicator that companies trust us and in response we offer unique solutions.",
-    },
-    {
-      id: 6,
-      title: "Big Experience",
-      text: "Many years of work in this field is an excellent indicator that companies trust us and in response we offer unique solutions.",
-    },
-  ];
+  const data = useStaticQuery(graphql`
+    query FeaturesQuery {
+      strapiPage(slug: { eq: "home" }) {
+        id
+        blocks {
+          ... on STRAPI__COMPONENT_HOME_FEATURES {
+            id
+            featureIconStack {
+              featureText
+              featureName
+              strapi_id
+              featureIcon {
+                id
+                localFile {
+                  publicURL
+                  url
+                }
+                alternativeText
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const features = data?.strapiPage?.blocks[1]?.featureIconStack;
+  console.log(features);
 
   return (
     <section className="container mx-auto px-10 my-36">
@@ -49,15 +43,23 @@ const Features = () => {
       <div className="grid grid-cols-2 mt-16">
         {features.map((feature) => (
           <div
-            key={feature.id}
+            key={feature?.strapi_id}
             className="rounded-lg transition duration-200 flex items-center  p-7"
           >
-            <div className="w-48 mr-7 mb-5">
-              <img className="object-cover" src={feature.icon} alt="" />
+            <div className="w-1/6 mr-7">
+              <img
+                className="object-contain"
+                src={feature?.featureIcon?.localFile?.publicURL}
+                alt={feature?.featureIcon?.alternativeText}
+              />
             </div>
-            <div>
-              <h3 className="text-3xl font-medium mb-5">{feature.title}</h3>
-              <p className="text-primary leading-7 text-2md">{feature.text}</p>
+            <div className="w-5/6">
+              <h3 className="text-3xl font-medium mb-5">
+                {feature?.featureName}
+              </h3>
+              <p className="text-primary leading-7 text-2md">
+                {feature?.featureText}
+              </p>
             </div>
           </div>
         ))}

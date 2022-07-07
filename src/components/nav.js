@@ -19,17 +19,16 @@ const Nav = () => {
       opacity: 1,
       rotateX: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.2,
       },
       display: "block",
       position: "absolute",
     },
     exit: {
       opacity: 0,
-      rotateX: -15,
+      rotateX: -45,
       transition: {
-        duration: 0.3,
-        delay: 0.0,
+        duration: 0.2,
       },
       transitionEnd: {
         position: "absolute",
