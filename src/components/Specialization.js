@@ -7,20 +7,33 @@ import Marketing from "../images/marketing.svg";
 import SearchEngines from "../images/search-engines.svg";
 import AppDevelopment from "../images/mobile-app.svg";
 import Writing from "../images/writing.svg";
+import { graphql, Link, useStaticQuery } from "gatsby";
 
 const Specialization = () => {
-  const skills = [
-    { id: 1, name: "Web Development", image: WebDevelopment },
-    { id: 2, name: "Graphic Design", image: GraphicDesign },
-    { id: 3, name: "Digital Marketing", image: Marketing },
-    { id: 4, name: "Search Engine Optimization", image: SearchEngines },
-    { id: 5, name: "Content Writing", image: Writing },
-    { id: 6, name: "Mobile App", image: AppDevelopment },
-  ];
+  const data = useStaticQuery(graphql`
+    query SpecializationQuery {
+      allStrapiService {
+        nodes {
+          serviceImage {
+            localFile {
+              publicURL
+              url
+            }
+          }
+          strapi_id
+          name
+          slug
+        }
+      }
+    }
+  `);
+
+  const skillsData = data?.allStrapiService?.nodes;
+  console.log(skillsData);
 
   return (
     <section className="container mx-auto px-10 my-36">
-      <SectionTitle className="text-5xl text-center">
+      <SectionTitle className="text-4xl md:text-5xl text-center">
         Our Specialization
       </SectionTitle>
       <SectionText className="max-w-5xl mx-auto text-center">
@@ -29,22 +42,27 @@ const Specialization = () => {
         notable online presence in a secure network.
       </SectionText>
 
-      <div className=" grid grid-cols-3 gap-10 my-10 auto-rows-fr">
-        {skills.map((skill) => (
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-10 auto-rows-fr">
+        {skillsData.map((skill) => (
           <div
-            key={skill.id}
+            key={skill?.strapi_id}
             className="rounded-lg p-10 bg-white flex flex-col justify-center shadow-custom"
           >
-            <div className="h-44 flex justify-center items-center">
-              <img
-                className="h-full object-cover"
-                src={skill.image}
-                alt={skill.name}
-              />
-            </div>
-            <h3 className="text-center text-3xl font-medium mt-10">
-              {skill.name}
-            </h3>
+            <Link to={`/services/${skill?.slug}`}>
+              <div className="h-44 flex justify-center items-center">
+                <img
+                  className="h-full object-cover"
+                  src={skill?.serviceImage?.localFile?.publicURL}
+                  alt={skill?.name}
+                />
+              </div>
+            </Link>
+
+            <Link to={`/services/${skill?.slug}`}>
+              <h3 className="text-center text-3xl font-medium mt-10 hover:text-secondary transition-colors">
+                {skill?.name}
+              </h3>
+            </Link>
           </div>
         ))}
       </div>

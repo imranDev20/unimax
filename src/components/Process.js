@@ -6,7 +6,7 @@ import WebProcessImage from "../images/web-process.png";
 const Process = () => {
   return (
     <section className="my-36 max-w-6xl mx-auto px-10">
-      <SectionTitle className="text-5xl text-center">
+      <SectionTitle className="text-4xl md:text-5xl text-center">
         Our Working Process
       </SectionTitle>
       <SectionText className="max-w-5xl mx-auto text-center">

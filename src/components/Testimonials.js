@@ -40,7 +40,7 @@ const Testimonials = () => {
   ];
   return (
     <section className="bg-background py-36">
-      <SectionTitle className="text-5xl text-center">
+      <SectionTitle className="text-4xl md:text-5xl text-center">
         Some Positive Feedback
       </SectionTitle>
       <SectionText className="max-w-5xl mx-auto text-center">
@@ -54,7 +54,17 @@ const Testimonials = () => {
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          slidesPerView={3}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
           navigation
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}

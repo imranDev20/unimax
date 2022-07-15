@@ -43,7 +43,7 @@ const WhatWeDo = () => {
         </p>
         <p className="mt-3">
           We pride ourselves, on the quality of our work, our dedication to
-          truly understanding our client’s goals, and our execution helping them
+          truly understanding our client's goals, and our execution helping them
           realize them.
         </p>
         <p className="mt-3">

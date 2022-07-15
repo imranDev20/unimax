@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebookSquare, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { BiCaretRight } from "react-icons/bi";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Seo from "../components/Seo";
 import sanitizeHtml from "sanitize-html";
@@ -10,8 +10,8 @@ import SectionTitle from "../components/SectionTitle";
 import Breadcrumb from "../components/Breadcrumb";
 
 const MemberDetails = ({ data }) => {
-  console.log(data?.strapiTeam);
   const teamData = data?.strapiTeam;
+  console.log(data?.strapiTeam);
 
   return (
     <Layout>
@@ -36,13 +36,12 @@ const MemberDetails = ({ data }) => {
               <p className="text-secondary font-medium">
                 {teamData?.designation}
               </p>
+              <p className="text-secondary font-medium">
+                {teamData?.expertiseType}
+              </p>
             </div>
             <div className="px-6 pb-6">
-              <span className="text-primary">
-                Our proven sales training program has made us a leader in sales
-                and management training, with hundreds of training centers
-                throughout North America and across the globe.
-              </span>
+              <span className="text-primary">{teamData?.summary}</span>
             </div>
             <hr className="bg-secondary" />
             <div className="p-6">
@@ -104,19 +103,22 @@ const MemberDetails = ({ data }) => {
             <hr />
             <div className="flex my-5 p-6">
               <a
-                href="https://facebook.com"
+                target="_blank"
+                href={teamData?.socials?.facebookLink}
                 className="p-4 bg-slate-200 mr-4 rounded hover:bg-secondary text-secondary cursor-pointer hover:text-white transition-all duration-300"
               >
                 <FaFacebookSquare className="text-lg" />
               </a>
               <a
-                href="https://facebook.com"
+                target="_blank"
+                href={teamData?.socials?.twitterLink}
                 className="p-4 bg-slate-200 mr-4 rounded hover:bg-secondary text-secondary cursor-pointer hover:text-white transition-all duration-300"
               >
                 <FaTwitter className="text-lg" />
               </a>
               <a
-                href="https://facebook.com"
+                target="_blank"
+                href={teamData?.socials?.linkedInLink}
                 className="p-4 bg-slate-200 mr-4 rounded hover:bg-secondary text-secondary cursor-pointer hover:text-white transition-all duration-300"
               >
                 <FaLinkedin className="text-lg" />
@@ -126,7 +128,7 @@ const MemberDetails = ({ data }) => {
           <div className="w-full lg:w-2/3">
             <div className="mb-8">
               <h2 className="text-3xl font-semibold mb-3 text-primary">
-                About our doctor
+                About {teamData?.name}
               </h2>
 
               <div
@@ -141,12 +143,17 @@ const MemberDetails = ({ data }) => {
                 Capabilities
               </h2>
               <div className="py-3">
-                <div className="flex items-center py-2">
-                  <BiCaretRight className="text-lg text-secondary mr-2" />
-                  <span className="text-primary">
-                    Routine and medical care and travel medicine.
-                  </span>
-                </div>
+                {teamData?.capabilities?.map((capability) => (
+                  <div
+                    key={capability?.strapi_id}
+                    className="flex items-center py-2"
+                  >
+                    <BiCaretRight className="text-lg text-secondary mr-2" />
+                    <span className="text-primary">
+                      {capability?.capabilityPoint}
+                    </span>
+                  </div>
+                ))}
               </div>
               <p className="py-3 text-primary">
                 Dentist is a Responsive One Page WordPress Theme special crafted
@@ -218,6 +225,7 @@ export const query = graphql`
         alternativeText
       }
       designation
+      expertiseType
       details {
         data {
           details
@@ -231,6 +239,11 @@ export const query = graphql`
         expertiseLevel
         skillName
         strapi_id
+      }
+      socials {
+        facebookLink
+        linkedInLink
+        twitterLink
       }
     }
   }

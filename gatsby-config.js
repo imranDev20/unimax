@@ -21,6 +21,24 @@ const strapiConfig = {
           capabilities: {
             populate: "*",
           },
+          socials: {
+            populate: "*",
+          },
+        },
+      },
+    },
+    {
+      singularName: `service`,
+      queryParams: {
+        populate: {
+          image: "*",
+          images: "*",
+          serviceImage: {
+            populate: "*",
+          },
+          slug: {
+            populate: "*",
+          },
         },
       },
     },
@@ -36,6 +54,9 @@ const strapiConfig = {
                 populate: "*",
               },
               featureIconStack: {
+                populate: "*",
+              },
+              technologyStack: {
                 populate: "*",
               },
             },

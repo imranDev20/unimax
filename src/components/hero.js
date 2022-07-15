@@ -30,9 +30,11 @@ const Hero = () => {
   console.log(data);
   const hero = data?.strapiPage?.blocks[0];
   return (
-    <section className="container mx-auto px-10 flex items-center my-28">
-      <div className="w-full lg:w-1/2">
-        <SectionTitle className="text-7xl">{hero?.heroTitle}</SectionTitle>
+    <section className="container mx-auto px-10 flex flex-col lg:flex-row items-center my-28">
+      <div className="w-full lg:w-1/2 text-center lg:text-left mb-20 lg:mb-0">
+        <SectionTitle className="text-5xl md:text-7xl">
+          {hero?.heroTitle}
+        </SectionTitle>
         <SectionText>{hero?.heroText}</SectionText>
         <LinkButton to="/contact">Contact</LinkButton>
       </div>

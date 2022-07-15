@@ -5,25 +5,37 @@ import ReactIcon from "../images/icons/react.svg";
 import JavaScript from "../images/icons/javascript.svg";
 import Strapi from "../images/icons/strapi.svg";
 import WordPress from "../images/icons/wordpress.svg";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Technologies = () => {
-  const techs = [
-    { id: 1, name: "React.js", icon: ReactIcon },
-    { id: 2, name: "JavaScript", icon: JavaScript },
-    { id: 3, name: "Strapi", icon: Strapi },
-    { id: 4, name: "WordPress", icon: WordPress },
-    { id: 5, name: "React.js", icon: ReactIcon },
-    { id: 6, name: "React.js", icon: ReactIcon },
-    { id: 7, name: "React.js", icon: ReactIcon },
-    { id: 8, name: "React.js", icon: ReactIcon },
-    { id: 9, name: "Strapi", icon: Strapi },
-    { id: 10, name: "React.js", icon: ReactIcon },
-    { id: 11, name: "React.js", icon: ReactIcon },
-    { id: 12, name: "React.js", icon: ReactIcon },
-  ];
+  const data = useStaticQuery(graphql`
+    query TechnologyQuery {
+      strapiPage {
+        blocks {
+          ... on STRAPI__COMPONENT_HOME_TECHNOLOGIES {
+            technologyStack {
+              strapi_id
+              technologyImage {
+                localFile {
+                  publicURL
+                  url
+                }
+              }
+              technologyName
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const techData = data?.strapiPage?.blocks[2]?.technologyStack;
+
   return (
     <section className="container mx-auto px-10">
-      <SectionTitle className="text-5xl text-center">Technologies</SectionTitle>
+      <SectionTitle className="text-4xl md:text-5xl text-center">
+        Technologies
+      </SectionTitle>
       <SectionText className="max-w-5xl mx-auto text-center">
         We use the best industrial-level technologies for all our projects and
         management to ensure the best quality of our work. Our team constantly
@@ -31,17 +43,21 @@ const Technologies = () => {
         work.
       </SectionText>
 
-      <div className="grid grid-cols-6 gap-12 mt-20">
-        {techs.map((tech) => (
+      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 mt-20">
+        {techData.map((tech) => (
           <div
-            key={tech.id}
+            key={tech?.strapi_id}
             className="p-3 flex flex-col justify-center items-center"
           >
-            <div className="w-16 h-16 ">
-              <img className="w-full object-cover" src={tech.icon} alt="" />
+            <div className="w-16 h-20 ">
+              <img
+                className="w-full h-full object-contain"
+                src={tech?.technologyImage?.localFile?.publicURL}
+                alt={tech?.technologyName}
+              />
             </div>
             <h3 className="text-center mt-7 text-2xl font-medium">
-              {tech.name}
+              {tech?.technologyName}
             </h3>
           </div>
         ))}

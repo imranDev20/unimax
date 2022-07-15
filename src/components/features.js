@@ -37,14 +37,14 @@ const Features = () => {
 
   return (
     <section className="container mx-auto px-10 my-36">
-      <SectionTitle className="text-5xl text-center">
+      <SectionTitle className="text-4xl md:text-5xl text-center">
         Exciting Features of Unimax
       </SectionTitle>
-      <div className="grid grid-cols-2 mt-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mt-16">
         {features.map((feature) => (
           <div
             key={feature?.strapi_id}
-            className="rounded-lg transition duration-200 flex items-center  p-7"
+            className="rounded-lg transition duration-200 flex items-center  lg:p-7"
           >
             <div className="w-1/6 mr-7">
               <img

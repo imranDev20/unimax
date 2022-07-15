@@ -15,6 +15,8 @@ const TeamPage = () => {
           slug
           name
           designation
+          expertiseType
+          strapi_id
           avatar {
             localFile {
               childImageSharp {
@@ -43,10 +45,12 @@ const TeamPage = () => {
       <section className="container px-10 mx-auto grid grid-cols-4 gap-10 mt-20">
         {team.map((member) => (
           <TeamCard
+            key={member?.strapi_id}
             image={getImage(member?.avatar?.localFile)}
             name={member?.name}
             slug={member?.slug}
             designation={member?.designation}
+            expertiseType={member?.expertiseType}
           />
         ))}
       </section>

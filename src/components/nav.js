@@ -101,38 +101,38 @@ const Nav = () => {
             <div className="shadow-custom bg-white rounded-md p-5 min-w-[180px]">
               <Link
                 className="block pb-3 text-primary hover:text-secondary font-medium transition text"
-                to="/team"
+                to="/services/web-development"
                 activeClassName="text-secondary"
               >
                 Web Development
               </Link>
               <Link
                 className="block pb-3 text-primary hover:text-secondary font-medium transition text"
-                to="/team"
+                to="/services/graphic-design"
               >
                 Graphic Design
               </Link>
               <Link
                 className="block pb-3 text-primary hover:text-secondary font-medium transition text"
-                to="/team"
+                to="/services/digital-marketing"
               >
                 Digital Marketing
               </Link>
               <Link
                 className="block pb-3 text-primary hover:text-secondary font-medium transition text"
-                to="/team"
+                to="/services/seo"
               >
                 SEO
               </Link>
               <Link
                 className="block pb-3 text-primary hover:text-secondary font-medium transition text"
-                to="/team"
+                to="/services/content-writing"
               >
                 Content Writing
               </Link>
               <Link
                 className="block text-primary hover:text-secondary font-medium transition text"
-                to="/team"
+                to="/services/mobile-app"
               >
                 Mobile App
               </Link>

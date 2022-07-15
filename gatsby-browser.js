@@ -2,6 +2,7 @@ import "./src/styles/global.css";
 
 import React from "react";
 import { AnimatePresence } from "framer-motion";
+import Layout from "./src/components/Layout";
 import "./src/styles/global.css";
 
 export const wrapPageElement = ({ element, props }) => {
