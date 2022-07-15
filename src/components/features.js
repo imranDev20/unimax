@@ -33,7 +33,6 @@ const Features = () => {
   `);
 
   const features = data?.strapiPage?.blocks[1]?.featureIconStack;
-  console.log(features);
 
   return (
     <section className="container mx-auto px-10 my-36">
@@ -44,7 +43,7 @@ const Features = () => {
         {features.map((feature) => (
           <div
             key={feature?.strapi_id}
-            className="rounded-lg transition duration-200 flex items-center  lg:p-7"
+            className="flex items-center lg:p-7 mb-7 lg:mb-0 "
           >
             <div className="w-1/6 mr-7">
               <img

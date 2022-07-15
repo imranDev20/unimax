@@ -8,8 +8,9 @@ import SearchEngines from "../images/search-engines.svg";
 import AppDevelopment from "../images/mobile-app.svg";
 import Writing from "../images/writing.svg";
 import { graphql, Link, useStaticQuery } from "gatsby";
+import Breadcrumb from "./Breadcrumb";
 
-const Specialization = () => {
+const Specialization = ({ isServicesPage }) => {
   const data = useStaticQuery(graphql`
     query SpecializationQuery {
       allStrapiService {
@@ -23,16 +24,19 @@ const Specialization = () => {
           strapi_id
           name
           slug
+          serviceSummary
         }
       }
     }
   `);
 
   const skillsData = data?.allStrapiService?.nodes;
-  console.log(skillsData);
 
   return (
-    <section className="container mx-auto px-10 my-36">
+    <section
+      className={`container mx-auto px-10 ${!isServicesPage && "my-36"} `}
+    >
+      {isServicesPage && <Breadcrumb second="services" />}
       <SectionTitle className="text-4xl md:text-5xl text-center">
         Our Specialization
       </SectionTitle>
@@ -63,6 +67,11 @@ const Specialization = () => {
                 {skill?.name}
               </h3>
             </Link>
+            {isServicesPage && (
+              <p className="text-center mt-5 text-primary">
+                {skill?.serviceSummary}
+              </p>
+            )}
           </div>
         ))}
       </div>

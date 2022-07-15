@@ -33,7 +33,7 @@ const Form = () => {
 
       <div className="flex justify-between">
         <div className="w-[48%] mb-3">
-          <select class="w-full px-3 py-2 rounded text-slate-400 outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out">
+          <select className="w-full px-3 py-2 rounded text-slate-400 outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out">
             <option>Select Service</option>
             <option>Web Development</option>
             <option>Graphic Design</option>

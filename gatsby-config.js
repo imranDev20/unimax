@@ -64,6 +64,18 @@ const strapiConfig = {
         },
       },
     },
+    {
+      singularName: `portfolio`,
+      queryParams: {
+        populate: {
+          image: "*",
+          images: "*",
+          images: {
+            populate: "*",
+          },
+        },
+      },
+    },
   ],
   singleTypes: [],
 };

@@ -11,7 +11,7 @@ const Accordion = ({ question, answer }) => {
         className=""
         onClick={() => setIsOpen(!isOpen)}
       >
-        <motion.div className="text-xl font-medium mb-4 pb-2 border-b border-secondary/20 cursor-pointer">
+        <motion.div className="text-xl font-medium mb-4 pb-2 border-b border-secondary/20 cursor-pointer text-primary">
           Do you like animations?
         </motion.div>
       </motion.div>
