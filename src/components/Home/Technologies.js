@@ -1,10 +1,6 @@
 import React from "react";
-import SectionText from "./SectionText";
-import SectionTitle from "./SectionTitle";
-import ReactIcon from "../images/icons/react.svg";
-import JavaScript from "../images/icons/javascript.svg";
-import Strapi from "../images/icons/strapi.svg";
-import WordPress from "../images/icons/wordpress.svg";
+import SectionText from "../Global/SectionText";
+import SectionTitle from "../Global/SectionTitle";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Technologies = () => {

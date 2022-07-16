@@ -1,11 +1,11 @@
 import { graphql, Link, useStaticQuery } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import React from "react";
-import Breadcrumb from "../components/Breadcrumb";
-import Layout from "../components/Layout";
-import SectionText from "../components/SectionText";
-import SectionTitle from "../components/SectionTitle";
-import TeamCard from "../components/TeamCard";
+import Breadcrumb from "../components/Global/Breadcrumb";
+import Layout from "../components/Global/Layout";
+import SectionText from "../components/Global/SectionText";
+import SectionTitle from "../components/Global/SectionTitle";
+import TeamCard from "../components/Team/TeamCard";
 
 const TeamPage = () => {
   const data = useStaticQuery(graphql`

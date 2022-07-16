@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../components/Layout";
-import SectionTitle from "../components/SectionTitle";
-import SectionText from "../components/SectionText";
-import Counter from "../components/Counter";
-import Seo from "../components/Seo";
-import WhatWeDo from "../components/WhatWeDo";
-import Breadcrumb from "../components/Breadcrumb";
-import Faq from "../components/Faq";
+import Layout from "../components/Global/Layout";
+import SectionTitle from "../components/Global/SectionTitle";
+import SectionText from "../components/Global/SectionText";
+import Counter from "../components/Global/Counter";
+import Seo from "../components/Global/Seo";
+import WhatWeDo from "../components/About/WhatWeDo";
+import Breadcrumb from "../components/Global/Breadcrumb";
+import Faq from "../components/About/Faq";
 
 const AboutPage = () => {
   return (

@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import useScrollListener from "../hooks/useScrollListener";
+import useScrollListener from "../../hooks/useScrollListener";
 import { NormalButton } from "./Button";
 import Form from "./Form";
 import Logo from "./Logo";

@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import PortfolioCard from "./PortfolioCard";
-import SectionText from "./SectionText";
-import SectionTitle from "./SectionTitle";
+import SectionText from "../Global/SectionText";
+import SectionTitle from "../Global/SectionTitle";
 
 const Portfolio = () => {
   const data = useStaticQuery(graphql`

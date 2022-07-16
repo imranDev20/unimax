@@ -1,11 +1,11 @@
 import { graphql } from "gatsby";
 import React from "react";
-import Layout from "../components/Layout";
-import ServiceCard from "../components/ServiceCard";
-import Steps from "../components/Steps";
-import ServiceDetailsMore from "../components/ServiceDetailsMore";
-import ServiceDetailsPricing from "../components/ServiceDetailsPricing";
-import Form from "../components/Form";
+import Layout from "../components/Global/Layout";
+import ServiceCard from "../components/Services/ServiceCard";
+import Steps from "../components/Services/Steps";
+import ServiceDetailsMore from "../components/Services/ServiceDetailsMore";
+import ServiceDetailsPricing from "../components/Services/ServiceDetailsPricing";
+import Form from "../components/Global/Form";
 
 const ServiceDetails = ({ data }) => {
   console.log(data);

@@ -1,14 +1,8 @@
 import React from "react";
-import SectionText from "./SectionText";
-import SectionTitle from "./SectionTitle";
-import WebDevelopment from "../images/web-development.svg";
-import GraphicDesign from "../images/graphic-design.svg";
-import Marketing from "../images/marketing.svg";
-import SearchEngines from "../images/search-engines.svg";
-import AppDevelopment from "../images/mobile-app.svg";
-import Writing from "../images/writing.svg";
+import SectionText from "../Global/SectionText";
+import SectionTitle from "../Global/SectionTitle";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import Breadcrumb from "./Breadcrumb";
+import Breadcrumb from "../Global/Breadcrumb";
 
 const Specialization = ({ isServicesPage }) => {
   const data = useStaticQuery(graphql`

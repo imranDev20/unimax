@@ -1,9 +1,9 @@
 import { Link } from "gatsby";
 import React from "react";
-import Form from "../components/Form";
-import Layout from "../components/Layout";
-import SectionText from "../components/SectionText";
-import SectionTitle from "../components/SectionTitle";
+import Form from "../components/Global/Form";
+import Layout from "../components/Global/Layout";
+import SectionText from "../components/Global/SectionText";
+import SectionTitle from "../components/Global/SectionTitle";
 
 const ContactPage = () => {
   return (

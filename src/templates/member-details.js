@@ -3,11 +3,11 @@ import { FaFacebookSquare, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { BiCaretRight } from "react-icons/bi";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import Seo from "../components/Seo";
+import Seo from "../components/Global/Seo";
 import sanitizeHtml from "sanitize-html";
-import Layout from "../components/Layout";
-import SectionTitle from "../components/SectionTitle";
-import Breadcrumb from "../components/Breadcrumb";
+import Layout from "../components/Global/Layout";
+import SectionTitle from "../components/Global/SectionTitle";
+import Breadcrumb from "../components/Global/Breadcrumb";
 
 const MemberDetails = ({ data }) => {
   const teamData = data?.strapiTeam;

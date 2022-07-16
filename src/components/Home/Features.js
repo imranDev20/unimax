@@ -1,8 +1,5 @@
 import React from "react";
-import SectionTitle from "./SectionTitle";
-import ExperienceIcon from "../images/icons/experience.svg";
-import TeamIcon from "../images/icons/team.svg";
-import SolutionIcon from "../images/icons/solution.svg";
+import SectionTitle from "../Global/SectionTitle";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Features = () => {

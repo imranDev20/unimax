@@ -8,8 +8,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper";
-import SectionTitle from "./SectionTitle";
-import SectionText from "./SectionText";
+import SectionTitle from "../Global/SectionTitle";
+import SectionText from "../Global/SectionText";
 
 const Testimonials = () => {
   const testimonials = [

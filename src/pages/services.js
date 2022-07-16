@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/Layout";
-import Seo from "../components/Seo";
-import Specialization from "../components/Specialization";
+import Layout from "../components/Global/Layout";
+import Seo from "../components/Global/Seo";
+import Specialization from "../components/Home/Specialization";
 
 const ServicesPage = () => {
   return (

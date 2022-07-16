@@ -1,8 +1,7 @@
 import React from "react";
-import { LinkButton } from "./Button";
-import SectionText from "./SectionText";
-import SectionTitle from "./SectionTitle";
-import HeroBg from "../images/hero-bg.svg";
+import { LinkButton } from "../Global/Button";
+import SectionText from "../Global/SectionText";
+import SectionTitle from "../Global/SectionTitle";
 import { graphql, useStaticQuery } from "gatsby";
 
 const Hero = () => {

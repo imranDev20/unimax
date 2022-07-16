@@ -1,7 +1,7 @@
 import React from "react";
-import SectionTitle from "./SectionTitle";
-import SectionText from "./SectionText";
-import WebProcessImage from "../images/web-process.png";
+import SectionTitle from "../Global/SectionTitle";
+import SectionText from "../Global/SectionText";
+import WebProcessImage from "../../images/web-process.png";
 
 const Process = () => {
   return (

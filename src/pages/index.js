@@ -1,13 +1,13 @@
 import * as React from "react";
-import Features from "../components/Features";
-import Hero from "../components/Hero";
-import Layout from "../components/Layout";
-import Portfolio from "../components/Portfolio";
-import Process from "../components/Process";
-import Seo from "../components/Seo";
-import Specialization from "../components/Specialization";
-import Technologies from "../components/Technologies";
-import Testimonials from "../components/Testimonials";
+import Features from "../components/Home/Features";
+import Hero from "../components/Home/Hero";
+import Layout from "../components/Global/Layout";
+import Portfolio from "../components/Home/Portfolio";
+import Process from "../components/Home/Process";
+import Seo from "../components/Global/Seo";
+import Specialization from "../components/Home/Specialization";
+import Technologies from "../components/Home/Technologies";
+import Testimonials from "../components/Home/Testimonials";
 
 // markup
 const IndexPage = () => {
