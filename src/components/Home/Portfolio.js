@@ -12,7 +12,7 @@ const Portfolio = () => {
           strapi_id
           slug
           name
-          images {
+          image {
             localFile {
               childImageSharp {
                 gatsbyImageData(width: 480)
@@ -39,9 +39,14 @@ const Portfolio = () => {
         attention being in the following categories:
       </SectionText>
 
-      <div className="grid grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
-        {portfolioItems.map((item) => (
-          <PortfolioCard key={item?.strapi_id} item={item} />
+      <div className="mt-16">
+        {portfolioItems.map((item, index) => (
+          <PortfolioCard
+            key={item?.strapi_id}
+            item={item}
+            index={index}
+            isReverse
+          />
         ))}
       </div>
     </section>

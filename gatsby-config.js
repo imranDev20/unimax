@@ -39,6 +39,15 @@ const strapiConfig = {
           slug: {
             populate: "*",
           },
+          subServices: {
+            populate: "*",
+          },
+          steps: {
+            populate: "*",
+          },
+          subServicePricing: {
+            populate: "*",
+          },
         },
       },
     },

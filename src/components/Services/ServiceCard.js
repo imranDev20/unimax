@@ -1,14 +1,15 @@
 import React from "react";
 
 const ServiceCard = (props) => {
-  const { id, name, intro } = props.service;
+  const { subServiceName, subServiceSummary, subServiceText, strapi_id } =
+    props.service;
   return (
     <div>
       <span className="text-white bg-blue-500 font-medium px-4 py-2 rounded-md">
-        {id}
+        {strapi_id}
       </span>
-      <h3 className="text-xl font-bold text-gray-800 mt-6">{name}</h3>
-      <p className="text-gray-400 mt-2 mb-6">{intro}</p>
+      <h3 className="text-xl font-bold text-gray-800 mt-6">{subServiceName}</h3>
+      <p className="text-gray-400 mt-2 mb-6">{subServiceSummary}</p>
     </div>
   );
 };
