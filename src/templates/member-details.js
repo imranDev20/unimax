@@ -25,6 +25,9 @@ const MemberDetails = ({ data }) => {
         <div className="container mx-auto px-10 flex flex-col lg:flex-row my-20">
           <div className="w-full lg:w-1/3 mr-0 lg:mr-14 rounded overflow-hidden shadow-custom bg-white">
             <GatsbyImage
+              className="max-h-[400px]"
+              objectFit="cover"
+              objectPosition="50% 0%"
               image={getImage(teamData?.avatar?.localFile)}
               alt={teamData?.avatar?.alternativeText}
             />

@@ -10,7 +10,7 @@ import TeamCard from "../components/Team/TeamCard";
 const TeamPage = () => {
   const data = useStaticQuery(graphql`
     query TeamQuery {
-      allStrapiTeam {
+      allStrapiTeam(sort: { order: ASC, fields: strapi_id }) {
         nodes {
           slug
           name
