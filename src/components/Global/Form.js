@@ -11,7 +11,7 @@ const Form = () => {
       <div className="flex justify-between">
         <div className="w-[48%] mb-3">
           <input
-            className="w-full px-3 py-2 rounded outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out"
+            className="w-full px-3 py-2 rounded outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out shadow-custom"
             id="email"
             type="email"
             name="email"
@@ -21,7 +21,7 @@ const Form = () => {
         </div>
         <div className="w-[48%] mb-3">
           <input
-            className="w-full px-3 py-2 rounded outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out"
+            className="w-full px-3 py-2 rounded outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out shadow-custom"
             id="email"
             type="email"
             name="email"
@@ -33,7 +33,7 @@ const Form = () => {
 
       <div className="flex justify-between">
         <div className="w-[48%] mb-3">
-          <select className="w-full px-3 py-2 rounded text-slate-400 outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out">
+          <select className="w-full px-3 py-2 rounded text-slate-400 outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out shadow-custom">
             <option>Select Service</option>
             <option>Web Development</option>
             <option>Graphic Design</option>
@@ -47,7 +47,7 @@ const Form = () => {
 
         <div className="w-[48%] mb-3 ">
           <input
-            className="w-full px-3 py-2 rounded outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out"
+            className="w-full px-3 py-2 rounded outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out shadow-custom"
             id="email"
             type="email"
             name="email"
@@ -59,14 +59,14 @@ const Form = () => {
 
       <textarea
         rows={7}
-        className="px-3 py-2 rounded outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out"
+        className="px-3 py-2 rounded outline-none focus:ring-2 ring-secondary transition-all duration-300 ease-in-out shadow-custom"
         id="message"
         name="message"
         placeholder="Message"
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <button
-        className="bg-secondary hover:bg-primary transition-colors text-white rounded py-2 mt-5"
+        className="bg-secondary hover:bg-primary transition-colors text-white rounded py-2 mt-5 shadow-custom"
         type="submit"
         disabled={state.submitting}
       >

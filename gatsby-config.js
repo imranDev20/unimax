@@ -36,9 +36,7 @@ const strapiConfig = {
           serviceImage: {
             populate: "*",
           },
-          slug: {
-            populate: "*",
-          },
+
           subServices: {
             populate: "*",
           },

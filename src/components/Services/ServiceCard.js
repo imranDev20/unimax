@@ -5,11 +5,11 @@ const ServiceCard = (props) => {
     props.service;
   return (
     <div>
-      <span className="text-white bg-blue-500 font-medium px-4 py-2 rounded-md">
+      <span className="text-white bg-secondary font-medium px-4 py-2 rounded-md">
         {strapi_id}
       </span>
-      <h3 className="text-xl font-bold text-gray-800 mt-6">{subServiceName}</h3>
-      <p className="text-gray-400 mt-2 mb-6">{subServiceSummary}</p>
+      <h3 className="text-xl font-bold text-primary mt-6">{subServiceName}</h3>
+      <p className="text-primary mt-2 mb-6">{subServiceSummary}</p>
     </div>
   );
 };

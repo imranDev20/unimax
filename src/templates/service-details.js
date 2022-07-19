@@ -18,38 +18,9 @@ const ServiceDetails = ({ data }) => {
     serviceImage,
     serviceSummary,
     subServicePricing,
+    steps,
     subServices,
   } = data?.strapiService;
-  console.log(name);
-
-  console.log(data);
-
-  const services = [
-    {
-      id: 1,
-      name: "Web design UX/UI",
-      intro:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.",
-    },
-    {
-      id: 2,
-      name: "React Develop",
-      intro:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.",
-    },
-    {
-      id: 3,
-      name: "Ecommerce Build",
-      intro:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.",
-    },
-    {
-      id: 4,
-      name: "Mern Development",
-      intro:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis expedita animi.",
-    },
-  ];
 
   return (
     <Layout>
@@ -66,7 +37,7 @@ const ServiceDetails = ({ data }) => {
         </div>
         <div className="w-full lg:w-1/2 px-6">
           <div>
-            <h2 className="text-4xl font-bold my-3">
+            <h2 className="text-4xl font-bold my-3 text-primary">
               We Provide Best <br />
               <span className="text-secondary">{name}</span> services
             </h2>
@@ -82,10 +53,18 @@ const ServiceDetails = ({ data }) => {
           </div>
         </div>
       </div>
-      <Steps />
-      <ServiceDetailsMore />
-      <ServiceDetailsPricing />
-      <Form />
+      <Steps steps={steps} />
+      <ServiceDetailsMore subServices={subServices} />
+      <ServiceDetailsPricing subServicePricing={subServicePricing} />
+
+      <section className="container mx-auto px-10">
+        <h2 className="text-4xl font-bold my-3 text-primary text-center">
+          Contact Us
+        </h2>
+        <div className="max-w-lg mx-auto">
+          <Form />
+        </div>
+      </section>
     </Layout>
   );
 };
@@ -108,19 +87,44 @@ export const query = graphql`
         subServiceName
         subServiceSummary
         strapi_id
+        isReverse
+        subServiceImage {
+          localFile {
+            publicURL
+          }
+        }
         subServiceText {
           data {
             subServiceText
           }
         }
       }
+      steps {
+        id
+        stepName
+        stepText
+
+        stepImage {
+          localFile {
+            childImageSharp {
+              gatsbyImageData
+            }
+            publicURL
+          }
+        }
+      }
       subServicePricing {
         strapi_id
+        subServicePricingName
         subServicePrice
+        isColored
         subServicePricingCardImage {
           localFile {
             publicURL
           }
+        }
+        subServicePricingCardPoints {
+          subServicePricingCardPoint
         }
       }
       strapi_id

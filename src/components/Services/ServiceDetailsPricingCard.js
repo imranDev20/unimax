@@ -1,151 +1,69 @@
 import React from "react";
 import { BsCheckCircle } from "react-icons/bs";
 
-const ServiceDetailsPricingCard = (props) => {
-  const {
-    name,
-    image,
-    price,
-    month,
-    email,
-    database,
-    domains,
-    storage,
-    isBlue,
-  } = props.price;
+const ServiceDetailsPricingCard = ({ item }) => {
+  console.log(item);
 
+  const {
+    strapi_id,
+    subServicePrice,
+    subServicePricingCardImage,
+    subServicePricingCardPoints,
+    subServicePricingName,
+    isColored,
+  } = item;
   return (
     <div
       className={`flex flex-col items-center border p-8 rounded-md hover:-translate-y-2 transition-all duration-500 ${
-        isBlue && "bg-blue-500"
+        isColored && "bg-secondary"
       }`}
     >
       <div className="w-24 h-24 my-6">
-        <img className="w-full h-full object-cover" src={image} alt="" />
+        <img
+          className="w-full h-full object-contain"
+          src={subServicePricingCardImage?.localFile?.publicURL}
+          alt=""
+        />
       </div>
       <div>
-        <h2 className={`text-3xl font-bold py-2 ${isBlue && "text-white"}`}>
-          {name}
+        <h2
+          className={`text-2xl text-center font-bold py-2 ${
+            isColored && "text-white"
+          }`}
+        >
+          {subServicePricingName}
         </h2>
-        <h3
-          className={`text-3xl font-bold text-blue-600 pb-2 ${
-            isBlue && "text-white"
-          }`}
-        >
-          {price}
-        </h3>
         <p
-          className={`text-gray-400 text-lg font-medium ${
-            isBlue && "text-white"
+          className={`text-4xl text-center font-bold text-secondary pb-2 ${
+            isColored && "text-white"
           }`}
         >
-          {month}
+          ${subServicePrice}
         </p>
       </div>
       <div className="my-5">
-        <p
-          className={`flex items-center text-gray-400 text-lg mb-2 ${
-            isBlue && "text-white"
-          }`}
-        >
-          <BsCheckCircle className="mr-2" />
-          {email}
-        </p>
-        <p
-          className={`flex items-center text-gray-400 text-lg mb-2 ${
-            isBlue && "text-white"
-          }`}
-        >
-          <BsCheckCircle className="mr-2" />
-          {database}
-        </p>
-        <p className="flex items-center text-gray-400 text-lg mb-2">
-          <BsCheckCircle className="mr-2" />
-          {domains}
-        </p>
-        <p className="flex items-center text-gray-400 text-lg mb-2">
-          <BsCheckCircle className="mr-2" />
-          {storage}
-        </p>
+        {subServicePricingCardPoints?.map((point) => (
+          <p
+            className={`flex items-center text-lg mb-2 ${
+              isColored ? "text-white" : "text-primary"
+            }`}
+          >
+            <BsCheckCircle className="mr-2" />
+            {point.subServicePricingCardPoint}
+          </p>
+        ))}
       </div>
-      <button className="bg-blue-500 hover:bg-blue-600 transition duration-300 px-6 py-2 text-lg text-white font-medium rounded">
-        Purchase
+      <button
+        className={`${
+          isColored ? "bg-white text-secondary" : "bg-secondary text-white "
+        } hover:bg-primary ${
+          isColored && "hover:text-white"
+        } transition duration-300 px-6 py-2 text-lg font-medium rounded `}
+      >
+        Choose
       </button>
     </div>
   );
 };
 
 export default ServiceDetailsPricingCard;
-
-const Price = (props) => {
-  const {
-    name,
-    image,
-    price,
-    month,
-    email,
-    database,
-    domains,
-    storage,
-    isBlue,
-  } = props.price;
-  return (
-    <div
-      className={`flex flex-col items-center border p-8 rounded-md hover:-translate-y-2 transition-all duration-500 ${
-        isBlue && "bg-blue-500"
-      }`}
-    >
-      <div className="w-24 h-24 my-6">
-        <img className="w-full h-full object-cover" src={image} alt="" />
-      </div>
-      <div>
-        <h2 className={`text-3xl font-bold py-2 ${isBlue && "text-white"}`}>
-          {name}
-        </h2>
-        <h3
-          className={`text-3xl font-bold text-blue-600 pb-2 ${
-            isBlue && "text-white"
-          }`}
-        >
-          {price}
-        </h3>
-        <p
-          className={`text-gray-400 text-lg font-medium ${
-            isBlue && "text-white"
-          }`}
-        >
-          {month}
-        </p>
-      </div>
-      <div className="my-5">
-        <p
-          className={`flex items-center text-gray-400 text-lg mb-2 ${
-            isBlue && "text-white"
-          }`}
-        >
-          <BsCheckCircle className="mr-2" />
-          {email}
-        </p>
-        <p
-          className={`flex items-center text-gray-400 text-lg mb-2 ${
-            isBlue && "text-white"
-          }`}
-        >
-          <BsCheckCircle className="mr-2" />
-          {database}
-        </p>
-        <p className="flex items-center text-gray-400 text-lg mb-2">
-          <BsCheckCircle className="mr-2" />
-          {domains}
-        </p>
-        <p className="flex items-center text-gray-400 text-lg mb-2">
-          <BsCheckCircle className="mr-2" />
-          {storage}
-        </p>
-      </div>
-      <button className="bg-blue-500 hover:bg-blue-600 transition duration-300 px-6 py-2 text-lg text-white font-medium rounded">
-        Purchase
-      </button>
-    </div>
-  );
-};
