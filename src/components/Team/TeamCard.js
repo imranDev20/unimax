@@ -9,7 +9,7 @@ const TeamCard = ({ image, name, designation, slug, expertiseType }) => {
       className="shadow-custom rounded-lg overflow-hidden"
     >
       <GatsbyImage
-        className="h-64"
+        className="h-80"
         imgClassName="w-full h-full"
         objectFit="cover"
         objectPosition="50% 0%"
