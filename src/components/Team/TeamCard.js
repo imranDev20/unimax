@@ -12,6 +12,7 @@ const TeamCard = ({ image, name, designation, slug, expertiseType }) => {
         className="h-64"
         imgClassName="w-full h-full"
         objectFit="cover"
+        objectPosition="50% 0%"
         image={image}
         alt={name}
       />
