@@ -137,7 +137,7 @@ const MemberDetails = ({ data }) => {
               <div
                 className="text-primary"
                 dangerouslySetInnerHTML={{
-                  __html: sanitizeHtml(teamData?.details.data.details),
+                  __html: sanitizeHtml(teamData?.details?.data?.details),
                 }}
               />
             </div>
