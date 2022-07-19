@@ -1,8 +1,8 @@
-import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import CounterBlock from "./CounterBlock";
+import { graphql, useStaticQuery } from "gatsby";
+import ChooseUsCounterBlock from "./ChooseUsCounterBlock";
 
-const Counter = () => {
+const WhyChooseUs = () => {
   return (
     <section className="container mx-auto px-10 mt-48 flex justify-between">
       <div className="w-1/2">
@@ -21,28 +21,28 @@ const Counter = () => {
         </p>
       </div>
       <div className="w-1/2 max-w-md mx-auto grid grid-cols-2 rounded-lg overflow-hidden shadow-custom bg-white">
-        <CounterBlock
+        <ChooseUsCounterBlock
           first
           target={15}
           title="Skilled Team Members"
           duration={2}
           symbol="+"
         />
-        <CounterBlock
+        <ChooseUsCounterBlock
           second
           target={115}
           title="Satisfied Customers"
           duration={2}
           symbol="+"
         />
-        <CounterBlock
+        <ChooseUsCounterBlock
           third
           target={65}
           title="Successfull Projects"
           duration={2}
           symbol="+"
         />
-        <CounterBlock
+        <ChooseUsCounterBlock
           fourth
           target={5}
           title="Years of Experience"
@@ -54,4 +54,4 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default WhyChooseUs;

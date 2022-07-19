@@ -11,20 +11,3 @@ export const LinkButton = ({ to, children }) => {
     </Link>
   );
 };
-
-export const NormalButton = ({
-  children,
-  className,
-  modalOpen,
-  open,
-  close,
-}) => {
-  return (
-    <button
-      onClick={() => (modalOpen ? close() : open())}
-      className={`rounded bg-secondary text-white transition-colors hover:bg-primary ${className}`}
-    >
-      {children}
-    </button>
-  );
-};

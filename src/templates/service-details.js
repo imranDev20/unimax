@@ -7,6 +7,8 @@ import ServiceDetailsMore from "../components/Services/ServiceDetailsMore";
 import ServiceDetailsPricing from "../components/Services/ServiceDetailsPricing";
 import Form from "../components/Global/Form";
 import Seo from "../components/Global/Seo";
+import Breadcrumb from "../components/Global/Breadcrumb";
+import SectionTitle from "../components/Global/SectionTitle";
 
 const ServiceDetails = ({ data }) => {
   const {
@@ -52,6 +54,8 @@ const ServiceDetails = ({ data }) => {
   return (
     <Layout>
       <Seo title={name} />
+      <Breadcrumb second="services" third={name} />
+      <SectionTitle className="text-5xl text-center">{name}</SectionTitle>
       <div className="min-h-screen container mx-auto px-10 py-20 flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 px-6">
           <img

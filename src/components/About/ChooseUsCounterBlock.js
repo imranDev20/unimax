@@ -2,7 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import CountUp from "react-countup";
 
-const CounterBlock = ({
+const ChooseUsCounterBlock = ({
   target,
   title,
   duration,
@@ -51,4 +51,4 @@ const CounterBlock = ({
   );
 };
 
-export default CounterBlock;
+export default ChooseUsCounterBlock;

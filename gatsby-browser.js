@@ -1,4 +1,6 @@
 import "./src/styles/global.css";
+import "./src/styles/project.css";
+import "./src/styles/ck-content.css";
 
 import React from "react";
 import { AnimatePresence } from "framer-motion";

@@ -1,0 +1,10 @@
+.ck-content blockquote {
+}
+
+.ck-content blockquote p i {
+  @apply font-['playfair_display'] italic text-3xl my-3 font-medium text-primary;
+}
+
+.ck-content blockquote p {
+  @apply text-secondary;
+}

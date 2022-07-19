@@ -7,7 +7,7 @@ import Breadcrumb from "../Global/Breadcrumb";
 const Specialization = ({ isServicesPage }) => {
   const data = useStaticQuery(graphql`
     query SpecializationQuery {
-      allStrapiService {
+      allStrapiService(sort: { order: DESC, fields: strapi_id }) {
         nodes {
           serviceImage {
             localFile {

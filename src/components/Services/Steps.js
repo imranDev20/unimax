@@ -25,6 +25,7 @@ const Steps = () => {
         "Sed ac magna sit amet risus tristique interdum at vel velit. In hac habitasse platea dictumst.",
     },
   ];
+
   return (
     <section className="bg-slate-100 py-10">
       <div className="container mx-auto px-10">

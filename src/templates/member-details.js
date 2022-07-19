@@ -235,6 +235,7 @@ export const query = graphql`
         capabilityPoint
         strapi_id
       }
+
       skills {
         expertiseLevel
         skillName

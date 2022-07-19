@@ -1,7 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import useScrollListener from "../../hooks/useScrollListener";
-import { NormalButton } from "./Button";
 import Form from "./Form";
 import Logo from "./Logo";
 
@@ -46,15 +45,12 @@ const Header = () => {
 
           <div className="hidden lg:flex items-center ">
             <Nav />
-            <NormalButton
-              modalOpen={modalOpen}
-              setModalOpen={setModalOpen}
-              open={open}
-              close={close}
-              className="px-3 py-2"
+            <button
+              onClick={() => (modalOpen ? close() : open())}
+              className={`rounded bg-secondary text-white transition-colors hover:bg-primary px-3 py-2`}
             >
-              Request Service
-            </NormalButton>
+              Request Services
+            </button>
           </div>
         </div>
       </header>

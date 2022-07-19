@@ -68,6 +68,12 @@ const strapiConfig = {
               technologyStack: {
                 populate: "*",
               },
+              pageHeaderText: {
+                populate: "*",
+              },
+              aboutImage: {
+                populate: "*",
+              },
             },
           },
         },
@@ -79,7 +85,7 @@ const strapiConfig = {
         populate: {
           image: "*",
           images: "*",
-          images: {
+          technologies: {
             populate: "*",
           },
         },
