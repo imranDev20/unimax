@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className="container mx-auto px-10 mt-48">
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 ">
         <div>
-          <Logo />
+          <Logo className="w-36" />
           <p className="mt-5 text-primary leading-7">
             Provide a full range of IT Services and Solutions to businesses and
             industry leaders, both large and small.

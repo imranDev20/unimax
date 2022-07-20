@@ -1,9 +1,15 @@
 import React from "react";
+import UnimaxLogo from "../../images/unimax.svg";
+import UnimaxLogoHor from "../../images/logo-unimax-hor.svg";
 
-const Logo = () => {
+const Logo = ({ className, isHorizontal }) => {
   return (
-    <div className="text-4xl font-bold text-primary">
-      Uni<span className="text-secondary">max</span>
+    <div className="py-1">
+      {!isHorizontal ? (
+        <img className={`${className}`} src={UnimaxLogo} alt="" />
+      ) : (
+        <img className={`${className}`} src={UnimaxLogoHor} alt="" />
+      )}
     </div>
   );
 };

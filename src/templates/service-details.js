@@ -44,8 +44,9 @@ const ServiceDetails = ({ data }) => {
             <p className="my-2 text-primary text-lg mt-10">{serviceSummary}</p>
           </div>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 pt-6">
-            {subServices.map((service) => (
+            {subServices.map((service, index) => (
               <ServiceCard
+                index={index}
                 key={service?.strapi_id}
                 service={service}
               ></ServiceCard>

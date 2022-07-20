@@ -41,7 +41,7 @@ const Header = () => {
         )}`}
       >
         <div className="container px-10 mx-auto flex items-center justify-between">
-          <Logo />
+          <Logo isHorizontal className="w-36" />
 
           <div className="hidden lg:flex items-center ">
             <Nav />

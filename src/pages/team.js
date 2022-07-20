@@ -5,6 +5,7 @@ import Breadcrumb from "../components/Global/Breadcrumb";
 import Layout from "../components/Global/Layout";
 import SectionText from "../components/Global/SectionText";
 import SectionTitle from "../components/Global/SectionTitle";
+import Seo from "../components/Global/Seo";
 import TeamCard from "../components/Team/TeamCard";
 
 const TeamPage = () => {
@@ -32,6 +33,8 @@ const TeamPage = () => {
   const team = data?.allStrapiTeam?.nodes;
   return (
     <Layout>
+      <Seo title="Team" />
+
       <section className="container px-10 mx-auto">
         <Breadcrumb second="team" />
         <SectionTitle className="text-7xl text-center ">Team</SectionTitle>
