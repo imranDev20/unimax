@@ -151,8 +151,8 @@ const MemberDetails = ({ data }) => {
                     key={capability?.strapi_id}
                     className="flex items-center py-2"
                   >
-                    <BiCaretRight className="text-lg text-secondary mr-2" />
-                    <span className="text-primary">
+                    <BiCaretRight className="w-7 text-lg text-secondary mr-2" />
+                    <span className="text-primary ">
                       {capability?.capabilityPoint}
                     </span>
                   </div>
